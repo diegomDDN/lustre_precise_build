@@ -1,6 +1,7 @@
 #!/bin/bash
 echo Output redirected to  /vagrant/lustre/LOG 
 rm -f  /vagrant/lustre/LOG
+export KERNEL=linux-2.6.32-573.3.1.el6.x86_64
 export LUSTREVER="lustre-2.7.0"
 case "${LUSTREVER}" in
   "lustre-2.7.0")
@@ -31,6 +32,9 @@ case "${LUSTREVER}" in
      export GIT_TAG=""
      export LUSTRE_VERSION="2.5.37-ddn-2"
      ;;
+   "lustre-2.5.39-ddn-1")
+     export GIT_TAG=""
+     export LUSTRE_VERSION="2.5.39-ddn-1"
 esac
 
 mkdir /vagrant/lustre/LOG
